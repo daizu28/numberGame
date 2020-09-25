@@ -11,28 +11,53 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var pointResult: UILabel!
     
-    //渡したい値を格納する変数を用意する
-    var pointResult :String?
-    
     @IBOutlet var rankOne: UILabel!
     
     @IBOutlet var rankTwo: UILabel!
     
     @IBOutlet var rankThree: UILabel!
-
+    
+    var point: Int = 0
+    
+    let saveData: UserDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pointResult.text = outputValue
+        pointResult.text = String(point)
+        
+        var rankArray: [Int] = []
+        
+        func setRank(){
+            if point > rankArray[1]{
+                rankArray.insert(point, at:0)
+            } else if point > rankArray[2] {
+                rankArray.insert(point, at:1)
+            } else if point > rankArray[3] {
+                rankArray.insert(point, at: 2)
+            } else {
+                rankArray.append(point)
+            }
+            
+            saveData.set(rankArray, forKey: "point")
+            
+        }
+        
+        rankOne.text = String(rankArray[0])
+        rankTwo.text = String(rankArray[1])
+        rankThree.text = String(rankArray[2])
 
         // Do any additional setup after loading the view.
     }
     
+    //はじめの画面に戻る
     @IBAction func back(){
         self.presentingViewController?.presentingViewController?
             .dismiss(animated: true, completion: nil)
-        
     }
+    
+    
+
     
 
     /*

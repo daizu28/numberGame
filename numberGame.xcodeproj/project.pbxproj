@@ -15,7 +15,6 @@
 		5682FB53251B7940009C358A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5682FB51251B7940009C358A /* LaunchScreen.storyboard */; };
 		5682FB5E251B7941009C358A /* numberGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682FB5D251B7941009C358A /* numberGameTests.swift */; };
 		5682FB69251B7941009C358A /* numberGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682FB68251B7941009C358A /* numberGameUITests.swift */; };
-		5682FB7B251B7AE7009C358A /* アートボード 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5682FB7A251B7AE7009C358A /* アートボード 1.png */; };
 		5682FB80251CCFC0009C358A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682FB7F251CCFC0009C358A /* GameViewController.swift */; };
 		5682FB85251CD066009C358A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682FB84251CD066009C358A /* ResultViewController.swift */; };
 		5682FB8A251CD088009C358A /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5682FB89251CD088009C358A /* RankViewController.swift */; };
@@ -53,7 +52,6 @@
 		5682FB64251B7941009C358A /* numberGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = numberGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5682FB68251B7941009C358A /* numberGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numberGameUITests.swift; sourceTree = "<group>"; };
 		5682FB6A251B7942009C358A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5682FB7A251B7AE7009C358A /* アートボード 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アートボード 1.png"; sourceTree = "<group>"; };
 		5682FB7F251CCFC0009C358A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5682FB84251CD066009C358A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		5682FB89251CD088009C358A /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		5682FB45251B791E009C358A /* numberGame */ = {
 			isa = PBXGroup;
 			children = (
-				5682FB79251B7AE7009C358A /* numbergame背景 */,
 				5682FB46251B791E009C358A /* AppDelegate.swift */,
 				5682FB48251B791E009C358A /* SceneDelegate.swift */,
 				5682FB4A251B791F009C358A /* ViewController.swift */,
@@ -139,14 +136,6 @@
 			);
 			path = numberGameUITests;
 			sourceTree = "<group>";
-		};
-		5682FB79251B7AE7009C358A /* numbergame背景 */ = {
-			isa = PBXGroup;
-			children = (
-				5682FB7A251B7AE7009C358A /* アートボード 1.png */,
-			);
-			path = "numbergame背景";
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -252,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5682FB53251B7940009C358A /* LaunchScreen.storyboard in Resources */,
-				5682FB7B251B7AE7009C358A /* アートボード 1.png in Resources */,
 				5682FB50251B7940009C358A /* Assets.xcassets in Resources */,
 				5682FB4E251B791F009C358A /* Main.storyboard in Resources */,
 			);

@@ -31,10 +31,19 @@ class GameViewController: UIViewController {
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
         
-        plusLabel.setTitle(String(suji.randomElement()!), for: .normal)
         
         // Do any additional setup after loading the view.
     }
+    
+    //エラーでる
+//    func decoButton(){
+//        //ボタンの装飾
+//        plus.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
+//        plus.backgroundColor = UIColor.white
+//        plust.layer.borderWidth = 2
+//        plus.layer.cornerRadius = 2
+//    }
+//    
     
     @IBAction func plus() {
         
@@ -47,24 +56,16 @@ class GameViewController: UIViewController {
         
     }
     
-    
-    //segueが動作することをViewControllerに通知するメソッド
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        // segueのIDを確認して特定のsegueの時のみ動作させる
-        if segue.identifier == "toResultView"{
-            //遷移先のViewControllerの取得
-            let resultViewController = segue.destination as?  ResultViewController
-            //用意した遷移先の変数に値を戻す
-            resultViewController?.pointResult = self.inputField.text
-        }
-    }
-    
     @IBAction func performSegueToResult(_ sender: Any){
         //画面遷移実行
         performSegue(withIdentifier: "toResultView", sender: nil)
-        if count == 0 {
-            performSegueToResult()
-            timer.invalidate()
+    }
+    
+    //segueを準備する時に呼ばれるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "toResultView"{
+            let resultViewController = segue.destination as!  ResultViewController
+            resultViewController.pointResult = self.point
         }
     }
 
@@ -74,7 +75,11 @@ class GameViewController: UIViewController {
         count = count - 0.01
         //ラベルに小数点以下2桁まで表示
         time.text = String(format: "%.2f", count)
-    
+        
+//        if count == 0 {
+//            self.performSegueToResult()
+//            timer.invalidate()
+//        }
     }
     
 
