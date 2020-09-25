@@ -20,21 +20,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPo-w3-Seb">
-                                <rect key="frame" x="161" y="325" width="92" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPo-w3-Seb">
+                                <rect key="frame" x="68.5" y="344" width="277" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Nxs-YJ-Ve4"/>
+                                    <constraint firstAttribute="height" constant="88" id="ZKp-iw-KwF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="31"/>
+                                <state key="normal" title="ゲームスタート">
+                                    <color key="titleColor" red="1" green="0.17254901960784313" blue="0.31372549019607843" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="start" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBo-Gt-tP5"/>
                                     <segue destination="GVa-hq-RtP" kind="show" id="eXt-RD-jW0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-YA-1m1">
-                                <rect key="frame" x="161" y="447" width="92" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-YA-1m1">
+                                <rect key="frame" x="68.5" y="482" width="277" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="5Wi-AZ-uWe"/>
+                                    <constraint firstAttribute="width" constant="277" id="mIh-mI-wSi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="31"/>
+                                <state key="normal" title="ランキング">
+                                    <color key="titleColor" red="0.1803921568627451" green="0.51372549019607838" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="ranking" destination="BYZ-38-t0r" eventType="touchUpInside" id="qkt-Bf-xIo"/>
                                     <segue destination="ois-Xu-odc" kind="show" id="Gop-os-hck"/>
@@ -43,7 +53,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0mt-YA-1m1" firstAttribute="top" secondItem="zPo-w3-Seb" secondAttribute="bottom" constant="50" id="2q4-ju-p5h"/>
+                            <constraint firstItem="zPo-w3-Seb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e8u-QG-SWC"/>
+                            <constraint firstItem="zPo-w3-Seb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="h0b-qJ-Dfg"/>
+                            <constraint firstItem="0mt-YA-1m1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vnl-qw-Km6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rankingLayout" destination="0mt-YA-1m1" id="Op0-hM-537"/>
+                        <outlet property="startLayout" destination="zPo-w3-Seb" id="ccv-AX-xXF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

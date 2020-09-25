@@ -25,15 +25,6 @@ class GameViewController: UIViewController {
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
         
-        func performSegueToResult(){
-            performSegue(withIdentifier: "toResultView", sender: nil)
-        }
-        
-        if count == 0 {
-            performSegueToResult()
-        }
-
-        
         // Do any additional setup after loading the view.
     }
     
@@ -44,6 +35,18 @@ class GameViewController: UIViewController {
     }
     
     
+    @objc func up() {
+        //countを0.01足す
+        count = count - 0.01
+        //ラベルに小数点以下2桁まで表示
+        time.text = String(format: "%.2f", count)
+        
+        if count == 0.00 {
+            performSegueToResult()
+            timer.invalidate()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toResultView"{
             let resultViewController = segue.destination as! ResultViewController
@@ -51,17 +54,10 @@ class GameViewController: UIViewController {
         }
     }
     
-    @objc func up() {
-
-        //countを0.01足す
-        count = count - 0.01
-        //ラベルに小数点以下2桁まで表示
-        time.text = String(format: "%.2f", count)
-        
-        
+    func performSegueToResult(){
+        performSegue(withIdentifier: "toResultView", sender: nil)
     }
     
-
     
     
 
