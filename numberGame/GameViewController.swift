@@ -31,19 +31,19 @@ class GameViewController: UIViewController {
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
         
+
+        func decoButton(){
+            //ボタンの装飾
+            plusLabel.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
+            plusLabel.backgroundColor = UIColor.white
+            plusLabel.layer.borderWidth = 2
+            plusLabel.layer.cornerRadius = 2
+        }
+        
         
         // Do any additional setup after loading the view.
     }
     
-    //エラーでる
-//    func decoButton(){
-//        //ボタンの装飾
-//        plus.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
-//        plus.backgroundColor = UIColor.white
-//        plust.layer.borderWidth = 2
-//        plus.layer.cornerRadius = 2
-//    }
-//    
     
     @IBAction func plus() {
         
@@ -54,6 +54,8 @@ class GameViewController: UIViewController {
     //1-9を順番に押せたらボタンの数字がシャッフルされる
         plusLabel.setTitle(String(suji.randomElement()!), for: .normal)
         
+    //番号 dooriniosaretara hanntoumeininaru
+//        plus.alpha = 0.3;
     }
     
     @IBAction func performSegueToResult(_ sender: Any){
