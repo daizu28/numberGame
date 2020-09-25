@@ -35,17 +35,10 @@ class GameViewController: UIViewController {
     }
     
     
-    @objc func up() {
-        //countを0.01足す
-        count = count - 0.01
-        //ラベルに小数点以下2桁まで表示
-        time.text = String(format: "%.2f", count)
-        
-        if count == 0.00 {
-            performSegueToResult()
-            timer.invalidate()
-        }
+    func performSegueToResult(){
+        performSegue(withIdentifier: "toResultView", sender: nil)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toResultView"{
@@ -53,11 +46,20 @@ class GameViewController: UIViewController {
             resultViewController.pointResult = self.point
         }
     }
+
     
-    func performSegueToResult(){
-        performSegue(withIdentifier: "toResultView", sender: nil)
+    @objc func up() {
+        //countを0.01足す
+        count = count - 0.01
+        //ラベルに小数点以下2桁まで表示
+        time.text = String(format: "%.2f", count)
+        
+        if count == 0 {
+            performSegueToResult()
+            timer.invalidate()
+        }
     }
-    
+
     
     
 
