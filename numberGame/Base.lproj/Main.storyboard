@@ -176,6 +176,7 @@
                     <navigationItem key="navigationItem" id="vev-dM-9w9"/>
                     <connections>
                         <outlet property="ose" destination="L9A-hS-HhM" id="Mk8-ly-Ou1"/>
+                        <outlet property="plusLabel" destination="fq6-WX-9UU" id="rFt-wS-end"/>
                         <outlet property="point" destination="i7h-rI-JRo" id="2JX-hF-R0R"/>
                         <outlet property="time" destination="Qxf-hA-l8j" id="a12-je-QOU"/>
                         <segue destination="Zg3-bW-GY2" kind="presentation" identifier="toResultView" id="MO6-44-OYn"/>

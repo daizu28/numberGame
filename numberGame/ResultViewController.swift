@@ -11,6 +11,9 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var pointResult: UILabel!
     
+    //渡したい値を格納する変数を用意する
+    var pointResult :String?
+    
     @IBOutlet var rankOne: UILabel!
     
     @IBOutlet var rankTwo: UILabel!
@@ -19,6 +22,8 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pointResult.text = outputValue
 
         // Do any additional setup after loading the view.
     }
