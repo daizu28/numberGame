@@ -38,8 +38,6 @@ class GameViewController: UIViewController {
         let sujiIndex = Int.random(in: 0...8)
         func changeButtonLabel(){
         plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
-        plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
-        plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
         }
         
 

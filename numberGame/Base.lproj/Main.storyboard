@@ -117,7 +117,7 @@
                                 <rect key="frame" x="192" y="443" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="91" y="443" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -139,7 +139,7 @@
                                 <rect key="frame" x="295" y="443" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -150,7 +150,7 @@
                                 <rect key="frame" x="191" y="542" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -161,7 +161,7 @@
                                 <rect key="frame" x="90" y="542" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -172,7 +172,7 @@
                                 <rect key="frame" x="294" y="542" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="190" y="644" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -194,7 +194,7 @@
                                 <rect key="frame" x="89" y="644" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -205,7 +205,7 @@
                                 <rect key="frame" x="293" y="644" width="30" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal">
+                                <state key="normal" title="0">
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
