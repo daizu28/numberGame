@@ -22,8 +22,11 @@ class GameViewController: UIViewController {
     
     var label: Int!
     
-    let suji: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var countShufle: Int = 0
 
+    
+    let sujiArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    let sujiIndex = Int.random(in: 0...8)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,34 +34,99 @@ class GameViewController: UIViewController {
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
         
-
-        func decoButton(){
-            //ボタンの装飾
-            plusLabel.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
-            plusLabel.backgroundColor = UIColor.white
-            plusLabel.layer.borderWidth = 2
-            plusLabel.layer.cornerRadius = 2
+        
+        let sujiIndex = Int.random(in: 0...8)
+        func changeButtonLabel(){
+        plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
+        plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
+        plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
         }
         
-        
+
+//        func decoButton(){
+//            //ボタンの装飾
+//            plusLabel.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
+//            plusLabel.backgroundColor = UIColor.white
+//            plusLabel.layer.borderWidth = 2
+//            plusLabel.layer.cornerRadius = 2
+//        }
+                
         // Do any additional setup after loading the view.
     }
     
+    func changeButtonLabel(){
+    plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
+    }
     
     @IBAction func plus() {
         
-        //ボタンを押したらポイントが１０入る
-        number = number + 10
-        point.text = String(number)
+        if sujiIndex == 1 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 2 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 3 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 4 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 5 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 6 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 7 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 8 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
+        if sujiIndex == 9 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+            plusLabel.alpha = 0.3;
+        }
         
-    //1-9を順番に押せたらボタンの数字がシャッフルされる
-        plusLabel.setTitle(String(suji.randomElement()!), for: .normal)
+        countShufle = countShufle + 1
         
-    //番号 dooriniosaretara hanntoumeininaru
-//        plus.alpha = 0.3;
+        if countShufle == 9 {
+            let sujiIndex = Int.random(in: 0...8)
+            func changeButtonLabel(){
+            plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
+            }
+        }
+        
     }
     
-    @IBAction func performSegueToResult(_ sender: Any){
+    @IBAction func performSegueToResult(){
         //画面遷移実行
         performSegue(withIdentifier: "toResultView", sender: nil)
     }
@@ -78,10 +146,9 @@ class GameViewController: UIViewController {
         //ラベルに小数点以下2桁まで表示
         time.text = String(format: "%.2f", count)
         
-//        if count == 0 {
-//            self.performSegueToResult()
-//            timer.invalidate()
-//        }
+        if count <= 0.00 {
+            self.performSegueToResult()
+        }
     }
     
 
