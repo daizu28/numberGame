@@ -144,7 +144,7 @@ class GameViewController: UIViewController {
         //ラベルに小数点以下2桁まで表示
         time.text = String(format: "%.2f", count)
         
-        if count <= 0.00 {
+        if count < 0.00 {
             self.performSegueToResult()
         }
     }
