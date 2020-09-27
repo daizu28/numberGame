@@ -13,9 +13,17 @@ class GameViewController: UIViewController {
     @IBOutlet var point: UILabel!
     @IBOutlet var ose: UILabel!
     @IBOutlet var plusLabel: UIButton!
+    @IBOutlet var plusLabel1: UIButton!
+    @IBOutlet var plusLabel2: UIButton!
+    @IBOutlet var plusLabel3: UIButton!
+    @IBOutlet var plusLabel4: UIButton!
+    @IBOutlet var plusLabel5: UIButton!
+    @IBOutlet var plusLabel6: UIButton!
+    @IBOutlet var plusLabel7: UIButton!
+    @IBOutlet var plusLabel8: UIButton!
     
+
     var count: Float = 15.00
-    
     var timer: Timer = Timer()
     
     var number: Int = 0
@@ -24,10 +32,11 @@ class GameViewController: UIViewController {
     
     var countShufle: Int = 0
 
-    
+
     let sujiArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     let sujiIndex = Int.random(in: 0...8)
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +49,15 @@ class GameViewController: UIViewController {
         plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
         }
         
+        plusLabel.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel1.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel2.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel3.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel4.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel5.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel6.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel7.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel8.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
 
 //        func decoButton(){
 //            //ボタンの装飾
@@ -52,74 +70,86 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func changeButtonLabel(){
-    plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
+    @objc func changeButtonLabel(){
+        
+        plusLabel.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel1.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel2.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel3.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel4.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel5.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel6.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel7.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        plusLabel8.setTitle(String(sujiArray[Int.random(in: 0...8)]), for: .normal)
+        
     }
     
     @IBAction func plus() {
         
+        countShufle = countShufle + 1
+        
+        if sujiIndex == 0 {
+            //ボタンを押したらポイントが１０入る
+            number = number + 10
+            point.text = String(number)
+//            plusLabel.alpha = 0.3;
+        }
         if sujiIndex == 1 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 2 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 3 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 4 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 5 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 6 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 7 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         if sujiIndex == 8 {
             //ボタンを押したらポイントが１０入る
             number = number + 10
             point.text = String(number)
-            plusLabel.alpha = 0.3;
-        }
-        if sujiIndex == 9 {
-            //ボタンを押したらポイントが１０入る
-            number = number + 10
-            point.text = String(number)
-            plusLabel.alpha = 0.3;
+//            plusLabel.alpha = 0.3;
         }
         
-        countShufle = countShufle + 1
         
-        if countShufle == 9 {
-            let sujiIndex = Int.random(in: 0...8)
+        if countShufle >= 9 {
+            self.changeButtonLabel()
             func changeButtonLabel(){
             plusLabel.setTitle(String(sujiArray[sujiIndex]), for: .normal)
             }
+            countShufle = 0
         }
         
     }
