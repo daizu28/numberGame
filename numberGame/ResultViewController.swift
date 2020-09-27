@@ -17,39 +17,58 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var rankThree: UILabel!
     
+
     var point: Int = 0
+    
+    var rankArray: [Int] = []
     
     let saveData: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         pointResult.text = String(point)
         
-        var rankArray: [Int] = []
+        rankArray = saveData.object(forKey: point)
         
-        func setRank(){
-            if point > rankArray[1]{
-                rankArray.insert(point, at:0)
-            } else if point > rankArray[2] {
-                rankArray.insert(point, at:1)
-            } else if point > rankArray[3] {
-                rankArray.insert(point, at: 2)
-            } else {
-                rankArray.append(point)
-            }
-            
-            saveData.set(rankArray, forKey: "point")
-            
+        if point > rankArray[1]{
+            rankArray.insert(point, at:0)
+        } else if point > rankArray[2] {
+            rankArray.insert(point, at:1)
+        } else if point > rankArray[3] {
+            rankArray.insert(point, at: 2)
+        } else {
+            rankArray.append(point)
         }
+
+        saveData.set(rankArray, forKey: "point")
+
         
-        rankOne.text = String(rankArray[0])
-        rankTwo.text = String(rankArray[1])
-        rankThree.text = String(rankArray[2])
 
         // Do any additional setup after loading the view.
     }
     
+ 
+    
+//    @objc  func setRank(){
+//        if point > rankArray[1]{
+//            rankArray.insert(point, at:0)
+//        } else if point > rankArray[2] {
+//            rankArray.insert(point, at:1)
+//        } else if point > rankArray[3] {
+//            rankArray.insert(point, at: 2)
+//        } else {
+//            rankArray.append(point)
+//        }
+//
+//        saveData.set(rankArray, forKey: "point")
+//
+//        rankOne.text = String(rankArray[0])
+//        rankTwo.text = String(rankArray[1])
+//        rankThree.text = String(rankArray[2])
+//    }
+        
     //はじめの画面に戻る
     @IBAction func back(){
         self.presentingViewController?.presentingViewController?
