@@ -9,12 +9,11 @@ import UIKit
 
 class RankViewController: UIViewController {
     
+    //ラベル類の宣言
     @IBOutlet var rankOne: UILabel!
-    
     @IBOutlet var rankTwo: UILabel!
-    
     @IBOutlet var rankThree: UILabel!
-    
+    //ランキング用の配列
     var rankArray: [Int] = []
 
     override func viewDidLoad() {
@@ -25,12 +24,14 @@ class RankViewController: UIViewController {
         //UserDefaultから配列に代入したかった
 //        rankArray.append(saveData.object(forKey: "point") as? String)
         
+        //ランキングを表示する
         rankOne.text = String(rankArray[0])
         rankTwo.text = String(rankArray[1])
         rankThree.text = String(rankArray[2])
         
     }
     
+    //初めの画面に戻る
     @IBAction func back(){
         self.presentingViewController?.presentingViewController?
             .dismiss(animated: true, completion: nil)

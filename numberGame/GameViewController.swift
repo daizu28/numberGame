@@ -9,9 +9,13 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    //タイマーのラベル
     @IBOutlet var time: UILabel!
+    //得点のラベル
     @IBOutlet var point: UILabel!
+    //順番に押して!
     @IBOutlet var ose: UILabel!
+    //各ボタンのラベル
     @IBOutlet var plusLabel1: UIButton!
     @IBOutlet var plusLabel2: UIButton!
     @IBOutlet var plusLabel3: UIButton!
@@ -22,52 +26,28 @@ class GameViewController: UIViewController {
     @IBOutlet var plusLabel8: UIButton!
     @IBOutlet var plusLabel9: UIButton!
     
-
+    //タイマーの変数
     var count: Float = 15.00
     var timer: Timer = Timer()
-    
+    //得点の変数
     var number: Int = 0
+    //ボタンの数字の配列(.appendでわざわざ追加してたけどここに初めから書いておくの方が良さそう)
+    var sujiArray : [Any] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    //正解の数字
+    var correctNumber: Int = 0
     
-    var label: Int!
-    
-    var countShufle: Int = 0
-
-
-    var sujiArray = [Any]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
-        
-        
-        sujiArray.append(["1"])
-        sujiArray.append(["2"])
-        sujiArray.append(["3"])
-        sujiArray.append(["4"])
-        sujiArray.append(["5"])
-        sujiArray.append(["6"])
-        sujiArray.append(["7"])
-        sujiArray.append(["8"])
-        sujiArray.append(["9"])
-        
-        sujiArray.shuffle()
-        
-        choiceSuji()
 
-//        func decoButton(){
-//            //ボタンの装飾
-//            plusLabel.layer.borderColor = UIColor(red: 255/255, green: 44/255, blue: 80/255, alpha: 1.0).cgColor
-//            plusLabel.backgroundColor = UIColor.white
-//            plusLabel.layer.borderWidth = 2
-//            plusLabel.layer.cornerRadius = 2
-//        }
                 
         // Do any additional setup after loading the view.
     }
    
+    //ボタンに数字を表示させたい
     func choiceSuji(){
         
         let sujiIndex = sujiArray[0]as! [Any]
@@ -84,6 +64,7 @@ class GameViewController: UIViewController {
         
     }
     
+    //ボタンが正解のものが押された時に得点が入るようにしたい
     @IBAction func plus(_ sender: UIButton) {
         
         let correctNumber: [String] = ["1","2","3","4","5","6","7","8","9"]
@@ -111,7 +92,7 @@ class GameViewController: UIViewController {
         }
     }
 
-    
+    //タイマーとタイマーが0以下になった時に遷移させる
     @objc func up() {
         //countを0.01足す
         count = count - 0.01

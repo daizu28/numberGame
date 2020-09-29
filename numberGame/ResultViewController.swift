@@ -9,40 +9,41 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    //ラベル類の宣言
     @IBOutlet var pointResult: UILabel!
     
-    @IBOutlet var rankOne: UILabel!
+    //ここの画面でもランキングみれたらいいかなって思ったけど一旦やめとく
+//    @IBOutlet var rankOne: UILabel!
+//    @IBOutlet var rankTwo: UILabel!
+//    @IBOutlet var rankThree: UILabel!
     
-    @IBOutlet var rankTwo: UILabel!
-    
-    @IBOutlet var rankThree: UILabel!
-    
-
+    //合計ポイント数
     var point: Int = 0
-    
-    var rankArray: [Int] = []
-    
+
+    //ユーザーデフォルトを使いますよって
     let saveData: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //合計ポイントを表示
         pointResult.text = String(point)
         
-        rankArray = saveData.object(forKey: point)
+        //ユーザーデフォルトからランキング
+//        rankArray = saveData.object(forKey: point) as! [Int]
         
-        if point > rankArray[1]{
-            rankArray.insert(point, at:0)
-        } else if point > rankArray[2] {
-            rankArray.insert(point, at:1)
-        } else if point > rankArray[3] {
-            rankArray.insert(point, at: 2)
-        } else {
-            rankArray.append(point)
-        }
+        //らんんキングだしたかったですよって
+//        if point > rankArray[1]{
+//            rankArray.insert(point, at:0)
+//        } else if point > rankArray[2] {
+//            rankArray.insert(point, at:1)
+//        } else if point > rankArray[3] {
+//            rankArray.insert(point, at: 2)
+//        } else {
+//            rankArray.append(point)
+//        }
+//
 
-        saveData.set(rankArray, forKey: "point")
 
         
 
