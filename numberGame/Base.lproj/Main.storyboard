@@ -122,7 +122,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="zcL-aY-TAg"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="ITZ-3X-lCv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-k1-C8p">
@@ -134,7 +134,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="pwP-xm-u60"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchDragInside" id="QCZ-uC-opu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-tM-9uh">
@@ -146,7 +146,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="R0u-GK-pYO"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="7vH-3Z-DYX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df9-oY-Te0">
@@ -158,7 +158,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="kRh-Gp-wMi"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="2Hd-ip-J0L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tb-8H-kuU">
@@ -170,7 +170,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="Ctz-cS-fyt"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="bKI-nO-8Yn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVT-65-7iL">
@@ -182,7 +182,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="8qo-Su-VMu"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="rG5-bR-Ioy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-No-c6D">
@@ -194,7 +194,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="zMU-ms-ply"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="2Re-jm-gOh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnM-oM-R8m">
@@ -206,7 +206,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="cUP-6g-lgZ"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="2pm-Ka-SmI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBP-EQ-YXW">
@@ -218,7 +218,7 @@
                                     <color key="titleColor" red="1" green="0.20115359129999999" blue="0.33921496610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus" destination="GVa-hq-RtP" eventType="touchUpInside" id="cCD-Jo-vnm"/>
+                                    <action selector="plus:" destination="GVa-hq-RtP" eventType="touchUpInside" id="Xlk-dD-ZoD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -370,9 +370,8 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="アセット 4" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-3f-zFl">
-                                <rect key="frame" x="77" y="334" width="52" height="47"/>
+                                <rect key="frame" x="77" y="337" width="52" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="Yk1-pO-D8S"/>
                                     <constraint firstAttribute="height" constant="47" id="vte-eS-rS3"/>
                                 </constraints>
                             </imageView>
@@ -383,7 +382,7 @@
                                     <constraint firstAttribute="height" constant="47" id="ya4-ob-0Ok"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="アセット 3" translatesAutoresizingMaskIntoConstraints="NO" id="XxA-1E-blY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="アセット 3" translatesAutoresizingMaskIntoConstraints="NO" id="XxA-1E-blY">
                                 <rect key="frame" x="77" y="250" width="52" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="cuR-E5-noo"/>
@@ -395,7 +394,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WmN-X8-82I" firstAttribute="bottom" secondItem="WmV-cN-c63" secondAttribute="bottom" constant="340" id="59b-nx-HPT"/>
-                            <constraint firstItem="mrY-RJ-85d" firstAttribute="leading" secondItem="ajk-3f-zFl" secondAttribute="trailing" constant="8" id="BGj-Ik-07G"/>
                             <constraint firstItem="dU9-Re-6KP" firstAttribute="top" secondItem="WmN-X8-82I" secondAttribute="top" constant="40" id="HoU-nm-oUd"/>
                             <constraint firstItem="alV-pR-CWO" firstAttribute="centerX" secondItem="2Jx-oN-SVh" secondAttribute="centerX" id="L2f-4C-zMq"/>
                             <constraint firstItem="ajk-3f-zFl" firstAttribute="top" secondItem="XxA-1E-blY" secondAttribute="bottom" constant="40" id="PH9-JY-mkL"/>
@@ -403,9 +401,12 @@
                             <constraint firstItem="WmN-X8-82I" firstAttribute="bottom" secondItem="alV-pR-CWO" secondAttribute="bottom" constant="340" id="XRL-Ao-z7W"/>
                             <constraint firstItem="mWU-Ip-uRK" firstAttribute="centerX" secondItem="2Jx-oN-SVh" secondAttribute="centerX" id="arf-QF-rSt"/>
                             <constraint firstItem="clR-oI-GQC" firstAttribute="centerX" secondItem="2Jx-oN-SVh" secondAttribute="centerX" id="b6C-Vq-kpK"/>
+                            <constraint firstItem="WmV-cN-c63" firstAttribute="top" secondItem="ajk-3f-zFl" secondAttribute="bottom" constant="37" id="bCf-ZD-GdZ"/>
                             <constraint firstItem="dU9-Re-6KP" firstAttribute="leading" secondItem="WmN-X8-82I" secondAttribute="leading" constant="20" id="fJM-Vt-4o0"/>
                             <constraint firstItem="mrY-RJ-85d" firstAttribute="top" secondItem="mWU-Ip-uRK" secondAttribute="bottom" constant="40" id="fWl-x8-IqO"/>
+                            <constraint firstItem="XxA-1E-blY" firstAttribute="top" secondItem="WmN-X8-82I" secondAttribute="top" constant="250" id="hS2-7t-AiN"/>
                             <constraint firstItem="alV-pR-CWO" firstAttribute="leading" secondItem="WmV-cN-c63" secondAttribute="trailing" constant="8" id="kJK-rZ-0m1"/>
+                            <constraint firstItem="ajk-3f-zFl" firstAttribute="top" secondItem="XxA-1E-blY" secondAttribute="bottom" constant="40" id="mkb-Wk-bdE"/>
                             <constraint firstItem="alV-pR-CWO" firstAttribute="top" secondItem="mrY-RJ-85d" secondAttribute="bottom" constant="40" id="vIc-Jx-kQ3"/>
                             <constraint firstItem="mWU-Ip-uRK" firstAttribute="leading" secondItem="XxA-1E-blY" secondAttribute="trailing" constant="8" id="y4P-2J-xu9"/>
                             <constraint firstItem="mWU-Ip-uRK" firstAttribute="top" secondItem="clR-oI-GQC" secondAttribute="bottom" constant="50" id="y99-OI-2WO"/>

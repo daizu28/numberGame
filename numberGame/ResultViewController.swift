@@ -12,14 +12,11 @@ class ResultViewController: UIViewController {
     //ラベル類の宣言
     @IBOutlet var pointResult: UILabel!
     
-    //ここの画面でもランキングみれたらいいかなって思ったけど一旦やめとく
-//    @IBOutlet var rankOne: UILabel!
-//    @IBOutlet var rankTwo: UILabel!
-//    @IBOutlet var rankThree: UILabel!
-    
     //合計ポイント数
     var point: Int = 0
-
+    //ランク表示ように整えた配列
+    var rankArray: [Int] = [0,0,0]
+    
     //ユーザーデフォルトを使いますよって
     let saveData: UserDefaults = UserDefaults.standard
     
@@ -29,46 +26,34 @@ class ResultViewController: UIViewController {
         //合計ポイントを表示
         pointResult.text = String(point)
         
-        //ユーザーデフォルトからランキング
-//        rankArray = saveData.object(forKey: point) as! [Int]
+        //ユーザーデフォルトの中に何もない時は単純に追加する
+        var value = saveData.array(forKey: "point")
+        if value == nil {
+            save()
+        }else{
         
-        //らんんキングだしたかったですよって
-//        if point > rankArray[1]{
-//            rankArray.insert(point, at:0)
-//        } else if point > rankArray[2] {
-//            rankArray.insert(point, at:1)
-//        } else if point > rankArray[3] {
-//            rankArray.insert(point, at: 2)
-//        } else {
-//            rankArray.append(point)
-//        }
-//
-
-
+        //これまでの値を配列の中に入れる
+        rankArray = saveData.object(forKey: "point") as! [Int]
         
+        save()
+        
+        }
 
         // Do any additional setup after loading the view.
     }
     
  
-    
-//    @objc  func setRank(){
-//        if point > rankArray[1]{
-//            rankArray.insert(point, at:0)
-//        } else if point > rankArray[2] {
-//            rankArray.insert(point, at:1)
-//        } else if point > rankArray[3] {
-//            rankArray.insert(point, at: 2)
-//        } else {
-//            rankArray.append(point)
-//        }
-//
-//        saveData.set(rankArray, forKey: "point")
-//
-//        rankOne.text = String(rankArray[0])
-//        rankTwo.text = String(rankArray[1])
-//        rankThree.text = String(rankArray[2])
-//    }
+    func save(){
+        //今回の値を配列に加える
+        rankArray.append(point)
+        
+        //降順に並べ替える
+        rankArray.sort {$1 < $0}
+        
+        //配列をユーザーデフォルトに保存
+        saveData.set(rankArray, forKey: "point")
+    }
+   
         
     //はじめの画面に戻る
     @IBAction func back(){

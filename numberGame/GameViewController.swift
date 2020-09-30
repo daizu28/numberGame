@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     //得点の変数
     var number: Int = 0
     //ボタンの数字の配列(.appendでわざわざ追加してたけどここに初めから書いておくの方が良さそう)
-    var sujiArray : [Any] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var sujiArray : [Any] = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
     //正解の数字
     var correctNumber: Int = 0
     
@@ -56,15 +56,14 @@ class GameViewController: UIViewController {
             //得点が入って表示される、ボタンが押せなくなる
             number = number + 10
             point.text = String(number)
-            button.isEnabled = false
-            button.alpha = 0.05
+//            button.alpha = 0.05
             //正解をずらしていく
             //8までは正解がずれていく(<9ではダメなのか？)
             if correctNumber < 8{
                 correctNumber = correctNumber + 1
             } else {
                 //正解を0に戻す
-                correctNumber = 0
+                correctNumber = 1
                 shuffledSujiArray()
                 choiceSuji()
             }
@@ -92,7 +91,7 @@ class GameViewController: UIViewController {
     
     //ボタンに数字を表示させたい
     func choiceSuji(){
-        for i in 0 ..< 8{
+        for i in 0 ..< 9{
             buttonLabel[i].setTitle(sujiArray[i] as? String, for: .normal)
         }
     }

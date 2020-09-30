@@ -15,14 +15,18 @@ class RankViewController: UIViewController {
     @IBOutlet var rankThree: UILabel!
     //ランキング用の配列
     var rankArray: [Int] = []
+    //合計ポイント数
+    var point: Int = 0
+    
+    //ユーザーデフォルトにアクセス
+    let saveData: UserDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //UserDefaultから配列に代入したかった
-//        rankArray.append(saveData.object(forKey: "point") as? String)
+        rankArray = saveData.object(forKey: "point") as! [Int]
         
         //ランキングを表示する
         rankOne.text = String(rankArray[0])
@@ -31,11 +35,11 @@ class RankViewController: UIViewController {
         
     }
     
-    //初めの画面に戻る
-    @IBAction func back(){
-        self.presentingViewController?.presentingViewController?
-            .dismiss(animated: true, completion: nil)
-    }
+    //初めの画面に戻るはずだけど戻らない…
+//    @IBAction func back(){
+//        self.presentingViewController?.presentingViewController?
+//            .dismiss(animated: true, completion: nil)
+//    }
     
 
     /*
