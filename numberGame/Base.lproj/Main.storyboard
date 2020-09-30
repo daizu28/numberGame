@@ -107,7 +107,7 @@
                                     <constraint firstAttribute="height" constant="47" id="z9h-6C-OcP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="順番に押して！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-hS-HhM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="順番に押して！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9A-hS-HhM">
                                 <rect key="frame" x="125.5" y="347.5" width="163.5" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
@@ -232,6 +232,7 @@
                             <constraint firstItem="TNp-ya-M9j" firstAttribute="top" secondItem="3zZ-hf-3qQ" secondAttribute="bottom" constant="24" id="EUR-Xb-aZK"/>
                             <constraint firstItem="i7h-rI-JRo" firstAttribute="leading" secondItem="TNp-ya-M9j" secondAttribute="trailing" constant="12" id="Icr-9S-J7a"/>
                             <constraint firstItem="i7h-rI-JRo" firstAttribute="top" secondItem="Qxf-hA-l8j" secondAttribute="bottom" constant="35" id="LU1-Gz-b5p"/>
+                            <constraint firstItem="L9A-hS-HhM" firstAttribute="top" secondItem="TNp-ya-M9j" secondAttribute="bottom" constant="136.5" id="OGq-hW-Run"/>
                             <constraint firstItem="Qxf-hA-l8j" firstAttribute="top" secondItem="PQs-Nd-RbK" secondAttribute="top" constant="97" id="Orb-tn-XoB"/>
                             <constraint firstItem="i7h-rI-JRo" firstAttribute="centerX" secondItem="NhN-fL-5Gt" secondAttribute="centerX" id="zMP-S8-3Ra"/>
                         </constraints>
@@ -239,17 +240,17 @@
                     <navigationItem key="navigationItem" id="vev-dM-9w9"/>
                     <connections>
                         <outlet property="ose" destination="L9A-hS-HhM" id="Mk8-ly-Ou1"/>
-                        <outlet property="plusLabel" destination="1ss-z0-iLu" id="uoW-Ff-FqY"/>
-                        <outlet property="plusLabel1" destination="kbf-k1-C8p" id="4lL-GN-OiJ"/>
-                        <outlet property="plusLabel2" destination="hAv-tM-9uh" id="akS-iw-jN0"/>
-                        <outlet property="plusLabel3" destination="df9-oY-Te0" id="JBr-of-Bk1"/>
-                        <outlet property="plusLabel4" destination="0tb-8H-kuU" id="qrm-iG-KDl"/>
-                        <outlet property="plusLabel5" destination="uVT-65-7iL" id="Kgp-R9-luT"/>
-                        <outlet property="plusLabel6" destination="RxJ-No-c6D" id="wMz-5H-beZ"/>
-                        <outlet property="plusLabel7" destination="jnM-oM-R8m" id="YTS-nl-lHA"/>
-                        <outlet property="plusLabel8" destination="DBP-EQ-YXW" id="WBb-2l-hCv"/>
                         <outlet property="point" destination="i7h-rI-JRo" id="2JX-hF-R0R"/>
                         <outlet property="time" destination="Qxf-hA-l8j" id="a12-je-QOU"/>
+                        <outletCollection property="buttonLabel" destination="1ss-z0-iLu" collectionClass="NSMutableArray" id="TQo-De-IVo"/>
+                        <outletCollection property="buttonLabel" destination="kbf-k1-C8p" collectionClass="NSMutableArray" id="wF9-DG-AZz"/>
+                        <outletCollection property="buttonLabel" destination="hAv-tM-9uh" collectionClass="NSMutableArray" id="5PH-15-Pgp"/>
+                        <outletCollection property="buttonLabel" destination="df9-oY-Te0" collectionClass="NSMutableArray" id="kf4-2w-bvP"/>
+                        <outletCollection property="buttonLabel" destination="0tb-8H-kuU" collectionClass="NSMutableArray" id="76M-84-OtC"/>
+                        <outletCollection property="buttonLabel" destination="uVT-65-7iL" collectionClass="NSMutableArray" id="BTR-ZO-jGO"/>
+                        <outletCollection property="buttonLabel" destination="RxJ-No-c6D" collectionClass="NSMutableArray" id="7RP-ci-A5D"/>
+                        <outletCollection property="buttonLabel" destination="jnM-oM-R8m" collectionClass="NSMutableArray" id="8QA-81-vlo"/>
+                        <outletCollection property="buttonLabel" destination="DBP-EQ-YXW" collectionClass="NSMutableArray" id="S9U-8l-wIY"/>
                         <segue destination="Zg3-bW-GY2" kind="presentation" identifier="toResultView" id="MO6-44-OYn"/>
                     </connections>
                 </viewController>

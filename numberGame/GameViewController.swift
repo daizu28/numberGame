@@ -15,16 +15,8 @@ class GameViewController: UIViewController {
     @IBOutlet var point: UILabel!
     //順番に押して!
     @IBOutlet var ose: UILabel!
-    //各ボタンのラベル
-    @IBOutlet var plusLabel1: UIButton!
-    @IBOutlet var plusLabel2: UIButton!
-    @IBOutlet var plusLabel3: UIButton!
-    @IBOutlet var plusLabel4: UIButton!
-    @IBOutlet var plusLabel5: UIButton!
-    @IBOutlet var plusLabel6: UIButton!
-    @IBOutlet var plusLabel7: UIButton!
-    @IBOutlet var plusLabel8: UIButton!
-    @IBOutlet var plusLabel9: UIButton!
+    //各ボタンのラベル([]をつけることによって複数に関連付けできて配列みたいに管理できるみたい)
+    @IBOutlet var buttonLabel: [UIButton]!
     
     //タイマーの変数
     var count: Float = 15.00
@@ -43,45 +35,9 @@ class GameViewController: UIViewController {
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
 
+        choiceSuji()
                 
         // Do any additional setup after loading the view.
-    }
-   
-    //ボタンに数字を表示させたい
-    func choiceSuji(){
-        
-        let sujiIndex = sujiArray[0]as! [Any]
-        
-        plusLabel1.setTitle(sujiIndex[1] as? String, for: .normal)
-        plusLabel2.setTitle(sujiIndex[2] as? String, for: .normal)
-        plusLabel3.setTitle(sujiIndex[3] as? String, for: .normal)
-        plusLabel4.setTitle(sujiIndex[4] as? String, for: .normal)
-        plusLabel5.setTitle(sujiIndex[5] as? String, for: .normal)
-        plusLabel6.setTitle(sujiIndex[6] as? String, for: .normal)
-        plusLabel7.setTitle(sujiIndex[7] as? String, for: .normal)
-        plusLabel8.setTitle(sujiIndex[8] as? String, for: .normal)
-        plusLabel9.setTitle(sujiIndex[9] as? String, for: .normal)
-        
-    }
-    
-    //ボタンが正解のものが押された時に得点が入るようにしたい
-    @IBAction func plus(_ sender: UIButton) {
-        
-        let correctNumber: [String] = ["1","2","3","4","5","6","7","8","9"]
-        
-        if ((sender.titleLabel?.text = sujiArray[0] as! String) != nil){
-            
-            number = number + 10
-            point.text = String(number)
-            sender.isEnabled = false
-            sender.alpha = 0.05
-        }
-        
-    }
-    
-    @IBAction func performSegueToResult(){
-        //画面遷移実行
-        performSegue(withIdentifier: "toResultView", sender: nil)
     }
     
     //segueを準備する時に呼ばれるメソッド
@@ -91,7 +47,37 @@ class GameViewController: UIViewController {
             resultViewController.point = self.number
         }
     }
-
+   
+    //ボタンが正解のものが押された時に得点が入るようにしたい
+    @IBAction func plus(_ button: UIButton) {
+        
+        //押されたボタンと正解が同じだった時
+        if button.titleLabel?.text == String(correctNumber){
+            //得点が入って表示される、ボタンが押せなくなる
+            number = number + 10
+            point.text = String(number)
+            button.isEnabled = false
+            button.alpha = 0.05
+            //正解をずらしていく
+            //8までは正解がずれていく(<9ではダメなのか？)
+            if correctNumber < 8{
+                correctNumber = correctNumber + 1
+            } else {
+                //正解を0に戻す
+                correctNumber = 0
+                shuffledSujiArray()
+                choiceSuji()
+            }
+        }
+        
+    }
+    
+    @IBAction func performSegueToResult(){
+        //画面遷移実行
+        performSegue(withIdentifier: "toResultView", sender: nil)
+    }
+    
+    //メソッド類
     //タイマーとタイマーが0以下になった時に遷移させる
     @objc func up() {
         //countを0.01足す
@@ -104,7 +90,17 @@ class GameViewController: UIViewController {
         }
     }
     
-
+    //ボタンに数字を表示させたい
+    func choiceSuji(){
+        for i in 0 ..< 8{
+            buttonLabel[i].setTitle(sujiArray[i] as? String, for: .normal)
+        }
+    }
+    
+    //sujiArray内をシャッフルする
+    func shuffledSujiArray(){
+        sujiArray.shuffle()
+    }
     
 
     
