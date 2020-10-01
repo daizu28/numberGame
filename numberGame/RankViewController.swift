@@ -35,12 +35,6 @@ class RankViewController: UIViewController {
         
     }
     
-    //初めの画面に戻るはずだけど戻らない…
-//    @IBAction func back(){
-//        self.presentingViewController?.presentingViewController?
-//            .dismiss(animated: true, completion: nil)
-//    }
-    
 
     /*
     // MARK: - Navigation

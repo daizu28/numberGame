@@ -24,9 +24,9 @@ class GameViewController: UIViewController {
     //得点の変数
     var number: Int = 0
     //ボタンの数字の配列(.appendでわざわざ追加してたけどここに初めから書いておくの方が良さそう)
-    var sujiArray : [Any] = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
+    var sujiArray : [Any] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     //正解の数字
-    var correctNumber: Int = 0
+    var correctNumber: Int = 1
     
     
     override func viewDidLoad() {
@@ -34,7 +34,8 @@ class GameViewController: UIViewController {
         
         //タイマーを動かす
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
-
+        
+        shuffledSujiArray()
         choiceSuji()
                 
         // Do any additional setup after loading the view.
@@ -56,10 +57,10 @@ class GameViewController: UIViewController {
             //得点が入って表示される、ボタンが押せなくなる
             number = number + 10
             point.text = String(number)
-//            button.alpha = 0.05
+            button.setTitle("", for: .normal)
             //正解をずらしていく
-            //8までは正解がずれていく(<9ではダメなのか？)
-            if correctNumber < 8{
+            //8までは正解がずれていく
+            if correctNumber < 9{
                 correctNumber = correctNumber + 1
             } else {
                 //正解を0に戻す
@@ -85,7 +86,10 @@ class GameViewController: UIViewController {
         time.text = String(format: "%.2f", count)
         
         if count < 0.00 {
+            //遷移する
             self.performSegueToResult()
+            //タイマーとめる(止めないと動きっぱなしになる)
+            timer.invalidate()
         }
     }
     
